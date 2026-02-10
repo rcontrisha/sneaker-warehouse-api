@@ -1,0 +1,490 @@
+{
+  "info": {
+    "_postman_id": "46e873e1-ab4c-4e60-8f35-6c76f7cb7126",
+    "name": "Sneaker Warehouse API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32071441",
+    "_collection_link": "https://go.postman.co/collection/32071441-46e873e1-ab4c-4e60-8f35-6c76f7cb7126?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Brands",
+      "item": [
+        {
+          "name": "All Brands",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/brands",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "brands"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Brand",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Adidas\",\r\n  \"country\": \"Germany\",\r\n  \"logo_url\": \"https://example.com/adidas.png\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/brands",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "brands"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Brand",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"country\": \"United Kingdom\",\r\n    \"logo_url\": \"https://example.com/gola.png\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/brands/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "brands",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "DELETE {{base_url}}/brands/:id",
+              "host": [
+                "DELETE {{base_url}}"
+              ],
+              "path": [
+                "brands",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "All Categories",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Basketball\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Vintage & Retro\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/categories/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/categories/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Product Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/:i",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":i"
+              ],
+              "variable": [
+                {
+                  "key": "i",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"brand_id\": 4,\r\n  \"category_id\": 1,\r\n  \"model_name\": \"Samba OG\",\r\n  \"description\": \"Sepatu terrace paling legendaris.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"model_name\": \"Harrier Retro\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/products/:i",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":i"
+              ],
+              "variable": [
+                {
+                  "key": "i",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Variants",
+      "item": [
+        {
+          "name": "Product Variants",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/:productId/variants",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":productId",
+                "variants"
+              ],
+              "variable": [
+                {
+                  "key": "productId",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detail Variant",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/variants/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "variants",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Variants",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"product_id\": 4,\r\n    \"size\": 41.0,\r\n    \"sku\": \"ADI-SAMBA-OG-41\",\r\n    \"stock\": 10,\r\n    \"price\": 2200000\r\n  },\r\n  {\r\n    \"product_id\": 4,\r\n    \"size\": 42.0,\r\n    \"sku\": \"ADI-SAMBA-OG-42\",\r\n    \"stock\": 15,\r\n    \"price\": 2200000\r\n  },\r\n  {\r\n    \"product_id\": 4,\r\n    \"size\": 43.0,\r\n    \"sku\": \"ADI-SAMBA-OG-43\",\r\n    \"stock\": 5,\r\n    \"price\": 2250000\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/variants",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "variants"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Variant",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"stock\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/variants/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "variants",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Variant",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/variants/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "variants",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
